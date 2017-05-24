@@ -1,0 +1,170 @@
+{
+ "name": "Acteurs de la controverse",
+ "children": [
+     {
+         "name": "Coévolution",
+         "children": [
+    {
+     "name": "Evolution des emplois",
+     "children": [
+             {
+                 "name": "Amazon",
+                 "size": 1
+             },
+             {
+                 "name": "Allaince IBM-Google-Microsoft-Facebook",
+                 "size": 1
+             },
+         {
+             "name": "National Robotics Initiative",
+             "size": 1
+         },
+         {
+             "name": "Conseil National du Numérique",
+             "size": 1
+         }
+         ]
+    },
+    {
+     "name": "Evolution des formations",
+     "children": [
+             {
+                 "name": "World Economic Forum",
+                 "size": 1
+             },
+             {
+                 "name": "Commission Européene sur les règles de droits civils sur la robotique",
+                 "size": 1
+             }
+         ]
+    },
+             {
+                 "name":"Dangerosité des robots et de l'IA",
+                 "children": [
+             {
+                 "name": "Bill Gates",
+                 "size": 1
+             },
+             {
+                 "name": "Stephan Hawkings",
+                 "size": 1
+             }
+         ]
+             }
+   ]
+     },
+     {
+         "name": "Impact sur le chômage",
+         "children": [
+             {
+                 "name": "Suppression massive d'emploi",
+                 "children": [
+             {
+                 "name": "Roland Berger",
+                 "size": 1
+             },
+             {
+                 "name": "Banque mondiale",
+                 "size": 1
+             },
+             {
+                 "name": "Université d'Oxford",
+                 "size": 1
+             }
+         ]
+             },
+             {
+                 "name": "Illusion du chômage technologique",
+                 "children": [
+             {
+                 "name": "McKinsey",
+                 "size": 1
+             },
+             {
+                 "name": "Conseil d'orientation pour l'emploi",
+                 "size": 1
+             },
+             {
+                 "name": "John Keynes",
+                 "size": 1
+             },
+             {
+                 "name": "Alfred Sauvy",
+                 "size": 1
+             },
+             {
+                 "name": "MIT",
+                 "size": 1
+             }
+         ]
+             }
+         ]
+     },
+     {
+         "name": "Métiers touchés",
+         "children": [
+             {
+                 "name":"Suppression du salariat",
+                 "children": [
+             {
+                 "name":"Parti Communiste français",
+                 "size": 1
+             },
+             {
+                 "name":"Syndicats américains",
+                 "size": 1
+             }
+         ]
+             },
+             {
+                 "name":"Les cadres, premiers touchés",
+                 "children": [
+             {
+                 "name":"Deep Knowledge Ventures",
+                 "size": 1
+             },
+             {
+                 "name":"Randall Collins",
+                 "size": 1
+             }
+         ]
+             }
+         ]
+     },
+     {
+         "name": "Responsabilité juridique",
+         "children": [
+             {
+                 "name": "Revenu universel",
+                 "children": [
+             {
+                 "name":"Benoît Hamon",
+                 "size": 1
+             },
+             {
+                 "name":"Mouvement français pour le revenu de base",
+                 "size": 1
+             }
+         ]
+             },
+             {
+                 "name": "La justice et les robots",
+                 "children": [
+             {
+                 "name":"Court de cassassion",
+                 "size": 1
+             },
+             {
+                 "name":"The European Parliament Legal Affairs Committee",
+                 "size": 1
+             },
+             {
+                 "name":"INRIA",
+                 "size": 1
+             }
+         ]
+             }
+         ]
+     }
+ ]
+}
