@@ -139,16 +139,22 @@
             <hr/>
                 <div>
 
-                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1NN1DKlHabdyuTS0SEI7uQDF2qAcndYSMr9dfNvA-j2o&font=Default&lang=fr&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1NN1DKlHabdyuTS0SEI7uQDF2qAcndYSMr9dfNvA-j2o&font=Default&lang=fr&initial_zoom=2&height=650' width='100%' height='800' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
                 </div>
                 <div class="col-lg-8">
-                    strate 2 -> carte des acteurs
-                    <svg id="svg1" width="800" height="800"></svg>
-                    <button class="btn btn-danger" > <a href="https://goo.gl/zRwEA1">Pour en savoir plus </a> </button>
+                    <div>Carte des acteurs </div>
+                <hr/>
+                <svg id="svg1" width="800" height="800"></svg>
+                <!--    strate 2 -> carte des acteurs -->
+            
+                <!--    <button class="btn btn-danger" > <a href="https://goo.gl/zRwEA1">Pour en savoir plus </a> </button> -->
                 </div>
                 <div class="col-lg-8">
-                    strate 3 -> carte des débats
-<!--<svg id="svg2" width="960" height="600"></svg> --> 
+                    <div>Carte des débats </div>
+                <hr/>
+                 <svg id="svg2" width="800" height="800"></svg>
+                    <!-- strate 3 -> carte des débats -->
+                <!--    <svg id="svg2" width="800" height="800"></svg> -->
                     <button class="btn btn-danger" > <a href="https://goo.gl/zRwEA1">Pour en savoir plus </a> </button>
                 </div>
             </div>
@@ -163,22 +169,8 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
+
+
                         <li>
                             <a href="https://github.com/controverses-telecomparistech/2017-controverses-etic-creation-sonore">
                                 <span class="fa-stack fa-lg">
@@ -188,7 +180,7 @@
                             </a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; groupe ETIC 1 2017</p>
                 </div>
             </div>
         </div>
@@ -208,7 +200,7 @@
     <script src="js/clean-blog.min.js"></script>
   <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-    var svg = d3.select("#svg1"),
+    var svg = d3.select("#svg1")
         margin = 20,
         diameter = +svg.attr("width"),
         g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
@@ -251,7 +243,7 @@
       var node = g.selectAll("circle,text");
 
       svg
-          .style("background", color(-1))
+          //.style("background", color(-1))
           .on("click", function() { zoom(root); });
 
       zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -279,10 +271,11 @@
         circle.attr("r", function(d) { return d.r * k; });
       }
     });
+    //deuxieme graphique
     var svg2 = d3.select("#svg2"),
     width = +svg2.attr("width"),
     height = +svg2.attr("height"),
-    g = svg2.append("g").attr("transform", "translate(40,0)");
+    g2 = svg2.append("g").attr("transform", "translate(40,0)");
 
 var tree = d3.cluster()
     .size([height, width - 160]);
@@ -298,7 +291,7 @@ d3.csv("flare.csv", function(error, data) {
 
   tree(root);
 
-  var link = g.selectAll(".link")
+  var link = g2.selectAll(".link")
       .data(root.descendants().slice(1))
     .enter().append("path")
       .attr("class", "link")
@@ -309,7 +302,7 @@ d3.csv("flare.csv", function(error, data) {
             + " " + d.parent.y + "," + d.parent.x;
       });
 
-  var node = g.selectAll(".node")
+  var node = g2.selectAll(".node")
       .data(root.descendants())
     .enter().append("g")
       .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
