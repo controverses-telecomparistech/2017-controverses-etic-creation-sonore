@@ -1,0 +1,2 @@
+La représentation est peu lisible, le format des données est peu maniable (une modification d'une racine entraine la mise à jour des toutes les branches issues de celle-ci).
+On va changer de représentation.
